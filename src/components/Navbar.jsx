@@ -36,7 +36,7 @@ export default function Navbar() {
       transition={{ type: 'spring', stiffness: 100, damping: 20 }}
       className="fixed top-0 left-0 right-0 z-50 glass-strong"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-3">
             <motion.div whileHover={{ scale: 1.05 }} className="flex-shrink-0">
@@ -44,10 +44,10 @@ export default function Navbar() {
                 <path d="M3 3 L18 33 L33 3 L25.5 3 L18 21 L10.5 3 Z" fill="black" className="dark:fill-white" />
               </svg>
             </motion.div>
-            <span className="text-xl font-black tracking-widest text-black dark:text-white">VILETRIX</span>
+            <span className="text-xl font-black tracking-widest text-black dark:text-white">VELTRIX</span>
           </Link>
 
-          <div className="hidden md:flex items-center gap-1">
+          <div className="items-center hidden gap-1 md:flex">
             {navLinks.map(link => (
               <Link
                 key={link.path}
@@ -87,7 +87,7 @@ export default function Navbar() {
                     onChange={(e) => setSearchQuery(e.target.value)}
                     placeholder="Search products..."
                     autoFocus
-                    className="input-soft text-sm py-2"
+                    className="py-2 text-sm input-soft"
                   />
                 </motion.form>
               )}
@@ -97,7 +97,7 @@ export default function Navbar() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={() => setSearchOpen(!searchOpen)}
-              className="p-2 rounded-soft text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              className="p-2 text-gray-600 transition-colors rounded-soft dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
             >
               {searchOpen ? <FiX size={20} /> : <FiSearch size={20} />}
             </motion.button>
@@ -106,7 +106,7 @@ export default function Navbar() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={toggleTheme}
-              className="p-2 rounded-soft text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              className="p-2 text-gray-600 transition-colors rounded-soft dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
             >
               <AnimatePresence mode="wait">
                 {dark ? (
@@ -125,14 +125,14 @@ export default function Navbar() {
               <motion.div
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className="p-2 rounded-soft text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                className="p-2 text-gray-600 transition-colors rounded-soft dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
               >
                 <FiShoppingCart size={20} />
                 {cartCount > 0 && (
                   <motion.span
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
-                    className="absolute -top-1 -right-1 w-5 h-5 bg-black dark:bg-white text-white dark:text-black text-xs font-bold rounded-full flex items-center justify-center"
+                    className="absolute flex items-center justify-center w-5 h-5 text-xs font-bold text-white bg-black rounded-full -top-1 -right-1 dark:bg-white dark:text-black"
                   >
                     {cartCount}
                   </motion.span>
@@ -142,7 +142,7 @@ export default function Navbar() {
 
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="md:hidden p-2 rounded-soft text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              className="p-2 text-gray-600 transition-colors md:hidden rounded-soft dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
             >
               {menuOpen ? <FiX size={20} /> : <FiMenu size={20} />}
             </button>
@@ -156,7 +156,7 @@ export default function Navbar() {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="md:hidden overflow-hidden border-t border-gray-200 dark:border-gray-800"
+            className="overflow-hidden border-t border-gray-200 md:hidden dark:border-gray-800"
           >
             <div className="px-4 py-3 space-y-1">
               {navLinks.map(link => (
