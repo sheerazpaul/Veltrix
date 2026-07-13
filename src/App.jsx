@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Routes, Route } from 'react-router-dom'
 import { Toaster } from 'react-hot-toast'
 import { AnimatePresence } from 'framer-motion'
@@ -43,3 +44,29 @@ export default function App() {
     </div>
   )
 }
+=======
+﻿import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { TaskProvider } from './store/TaskContext'
+import Layout from './components/Layout'
+import Inbox from './pages/Inbox'
+import Today from './pages/Today'
+import Projects from './pages/Projects'
+
+function App() {
+  return (
+    <TaskProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/" element={<Inbox />} />
+            <Route path="/today" element={<Today />} />
+            <Route path="/projects" element={<Projects />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </TaskProvider>
+  )
+}
+
+export default App
+>>>>>>> 919c478c0c15e43df7f628bb7cf3a126fbf1c158
