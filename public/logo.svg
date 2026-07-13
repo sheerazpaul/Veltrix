@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" fill="none">
+  <defs>
+    <linearGradient id="cut" x1="24" y1="0" x2="24" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#000"/>
+      <stop offset="0.48" stop-color="#000"/>
+      <stop offset="0.52" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+  </defs>
+  <!-- V mark - sharp angular, split diagonally black/white -->
+  <path d="M4 4 L24 44 L44 4 L34 4 L24 28 L14 4 Z" fill="url(#cut)"/>
+  <path d="M14 4 L24 28 L34 4 L44 4 L24 44 L4 4 Z" fill="none" stroke="#000" stroke-width="0.5" stroke-linejoin="miter"/>
+  <!-- VILETRIX wordmark -->
+  <text x="56" y="33" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="26" font-weight="900" letter-spacing="3" fill="#000">VILETRIX</text>
+</svg>
